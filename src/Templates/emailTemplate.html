@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Invitation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .card {
+            width: 100%;
+            max-width: 600px;
+            margin: auto;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            background-color: black;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .hero {
+            background-color: rgb(230, 51, 51);
+            color: white;
+            padding: 20px;
+        }
+        .hero ul {
+            padding: 0;
+            list-style: none;
+            margin: 0;
+        }
+        .hero ul li {
+            margin-bottom: 10px;
+        }
+        .hero ul li strong {
+            display: inline-block;
+            width: 100px;
+        }
+        .footer {
+            background-color: white;
+            color: black;
+            padding: 20px;
+            text-align: center;
+        }
+        .footer p {
+            margin: 10px 0;
+        }
+        a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 600px) {
+            .header, .hero, .footer {
+                padding: 10px;
+            }
+            .header h1 {
+                font-size: 20px;
+            }
+            .hero ul li strong {
+                width: 80px;
+            }
+            .footer p {
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="header">
+            <h1>Dear {{participantName}},</h1>
+            <p>You are invited to the following event:</p>
+        </div>
+        <div class="hero">
+            <ul>
+                <li><strong>Title:</strong> {{title}}</li>
+                <li><strong>Start:</strong> {{start}}</li>
+                <li><strong>End:</strong> {{end}}</li>
+                <li><strong>Researcher:</strong> {{researcher}}</li>
+                <li><strong>Meeting Link:</strong> <a href="{{meetLink}}">Join Meeting</a></li>
+            </ul>
+        </div>
+        <div class="footer">
+            <p><strong>Comments:</strong> {{comments}}</p>
+            <p><strong>Status:</strong> {{status}}</p>
+            <p>Best regards,<br>{{researcher}}</p>
+        </div>
+    </div>
+</body>
+</html>
